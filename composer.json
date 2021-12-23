@@ -1,0 +1,20 @@
+{
+    "name": "fabiogoncalves/php-profissional",
+    "description": "Aprofundando os conhecimentos em php",
+    "autoload": {
+        "files":[
+            "app/helpers/constantes.php",
+            "app/router/router.php"
+        ],
+        "psr-4": {
+            "Fabiogoncalves\\PhpProfissional\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Fabio Gilberto",
+            "email": "fabio.goncalves@bomjesus.br"
+        }
+    ],
+    "require": {}
+}
