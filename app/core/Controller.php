@@ -1,5 +1,12 @@
 <?php
-
-function controller($matchedUri){
-    var_dump($matchedUri);
+function controller($matchedUri)
+{
+   [$controller,$method] = explode('@',array_values($matchedUri)[0]);
+   if(class_exists('app\\controllers\\'.$controller)){
+       var_dump('existe');
+       die();
+    }else{
+        var_dump('não existe -');
+        die();
+   }
 }
