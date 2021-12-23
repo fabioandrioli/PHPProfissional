@@ -4,7 +4,8 @@
     "autoload": {
         "files":[
             "app/helpers/constantes.php",
-            "app/router/router.php"
+            "app/router/router.php",
+            "app/core/Controller.php"
         ],
         "psr-4": {
             "Fabiogoncalves\\PhpProfissional\\": "app/"
