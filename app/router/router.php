@@ -49,6 +49,7 @@
         $routes = routes();
         $matchedUri = exactMatchUriInArrayRoutes($uri,$routes);
 
+        $params = [];
         if(empty($matchedUri)){
              
             $matchedUri = regularExpressionMatchArrayRoutes($routes,$uri);
@@ -58,8 +59,7 @@
         }
         
         if(!empty($matchedUri)){
-            controller($matchedUri);
-            return;
+            return controller($matchedUri,$params);
         }
 
         throw new Exception('Algo deu errado');

@@ -2,7 +2,10 @@
 namespace app\controllers;
 class Home
 {
-    public  function index(){
-        echo "teste";
+    public function index($params){
+        return [
+            'view' => 'home.view.php',
+            'data' => ['name' => 'Fábio Gilberto'],
+        ];
     }
 }
