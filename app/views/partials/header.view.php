@@ -26,13 +26,23 @@
         <input class="form-control me-2" type="search" placeholder="Buscar conteudo" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Buscar</button>
       </form>
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/login">Login</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Cadastro</a>
-      </ul>
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <?php if(!logged()): ?>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/login">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Cadastro</a>
+                </li>
+            <?php else: ?>
+                <li class="nav-item">
+                <a class="nav-link"><?= user()->name ?></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout">logout</a>
+                </li>
+            <?php endif; ?>
+        </ul>
     </div>
   </div>
 </nav>

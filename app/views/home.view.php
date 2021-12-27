@@ -2,7 +2,7 @@
     <h2>Página home</h2>
 </div>
 <div style="width:100%; margin:20px;">
-    <button class="btn btn-primary">Novo</button>
+    <a href="/user/create" class="btn btn-primary">Novo</a>
 </div>
 <ul>
     <?php foreach ($users as $user): ?>
